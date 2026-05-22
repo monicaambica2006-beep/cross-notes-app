@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+/* MAIN CONTAINER */
+.auth-container {
+
+    width: 350px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.2);
+}
+
+.auth-container button {
+
+    background: #667eea;
+    color: white;
+}
+
+.container {
+
+    width: 100%;
+    max-width: 550px;
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.2);
+
+    border:
+        1px solid rgba(255,255,255,0.2);
+
+    color: white;
+}
+
+/* HEADER */
+
+.header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.header h1 {
+
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* DARK MODE BUTTON */
+
+#themeToggle {
+
+    background: white;
+    color: black;
+
+    border: none;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+#themeToggle:hover {
+
+    transform: scale(1.1);
+}
+
+/* INPUT SECTION */
+
+.input-section {
+
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+#noteInput {
+
+    flex: 1;
+}
+
+/* INPUTS */
+
+input,
+select {
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+/* COLOR PICKER */
+
+#noteColor {
+
+    width: 60px;
+    height: 45px;
+
+    padding: 3px;
+
+    cursor: pointer;
+}
+
+/* BUTTONS */
+
+.button-group {
+
+    display: flex;
+    gap: 10px;
+
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+
+    padding: 12px 16px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+button:hover {
+
+    transform: translateY(-2px);
+}
+
+/* ADD BUTTON */
+
+.button-group button:first-child {
+
+    background: #00c853;
+    color: white;
+}
+
+/* EXPORT BUTTON */
+
+.button-group button:last-child {
+
+    background: #ff9800;
+    color: white;
+}
+
+/* SEARCH */
+
+#searchInput {
+
+    width: 100%;
+
+    margin-bottom: 20px;
+}
+
+/* NOTES */
+
+ul {
+
+    list-style: none;
+}
+
+/* NOTE CARD */
+li {
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    margin-bottom: 15px;
+
+    color: black;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.15);
+
+    transition: 0.3s;
+
+    animation: slideIn 0.4s ease;
+    @keyframes slideIn {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+}
+
+
+li:hover {
+
+    transform: translateY(-3px);
+}
+
+/* NOTE CONTENT */
+
+.note-content {
+
+    width: 70%;
+}
+
+.note-content strong {
+
+    font-size: 14px;
+}
+
+.note-content p {
+
+    margin: 8px 0;
+
+    font-size: 17px;
+
+    word-wrap: break-word;
+}
+
+.note-content small {
+
+    color: #333;
+}
+
+/* NOTE BUTTONS */
+
+.note-buttons {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.pin-btn {
+
+    background: #4caf50;
+    color: white;
+}
+
+.edit-btn {
+
+    background: #ff9800;
+    color: white;
+}
+
+.delete-btn {
+
+    background: #f44336;
+    color: white;
+}
+
+/* CHARACTER COUNTER */
+
+#charCount {
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+
+    opacity: 0.9;
+}
+
+/* TOAST */
+
+#toast {
+
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+
+    background: black;
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    display: none;
+
+    animation: fadeIn 0.3s;
+}
+
+/* DARK MODE */
+
+.dark-mode {
+
+    background:
+        linear-gradient(
+            135deg,
+            #141e30,
+            #243b55
+        );
+}
+
+.dark-mode .container {
+
+    background:
+        rgba(0,0,0,0.4);
+}
+
+.dark-mode input,
+.dark-mode select {
+
+    background: #333;
+    color: rgb(7, 7, 7);
+}
+
+.dark-mode li {
+
+    color: rgb(11, 11, 11) !important;
+}
+
+.dark-mode small {
+
+    color: #070707;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width: 600px) {
+
+    .container {
+
+        width: 100%;
+    }
+
+    .input-section {
+
+        flex-direction: column;
+    }
+
+    .button-group {
+
+        flex-direction: column;
+    }
+
+    .note-buttons {
+
+        flex-direction: row;
+    }
+
+    li {
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .note-content {
+
+        width: 100%;
+    }
+}

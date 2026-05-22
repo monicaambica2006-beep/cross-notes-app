@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="auth-container" id="authContainer">
+
+    <h2>Login</h2>
+
+    <input
+        type="text"
+        id="username"
+        placeholder="Username">
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Password">
+
+    <button onclick="login()">
+        Login
+    </button>
+
+</div>
+
+    <div class="container"style="display:none;">
+
+        <div class="header">
+
+            <h1>📝 Notes App</h1>
+
+            <button id="themeToggle">🌙</button>
+
+        </div>
+
+        <div class="input-section">
+
+            <input
+                type="text"
+                id="noteInput"
+                placeholder="Write your note">
+
+            <select id="category">
+
+                <option>Study</option>
+                <option>Personal</option>
+                <option>Work</option>
+                <option>holiday</option>
+                <option>events</option>
+                <option>important</option>
+                <option>meeting</option>
+
+            </select>
+
+            <input type="color" id="noteColor">
+            
+
+        </div>
+
+        <p id="charCount">0 Characters</p>
+
+        <div class="button-group">
+
+            <button onclick="addNote()">
+                Add Note
+            </button>
+
+            <button onclick="exportNotes()">
+                Export
+            </button>
+
+        </div>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Notes..."
+            onkeyup="searchNotes()">
+
+        <ul id="notesList"></ul>
+
+    </div>
+
+    <div id="toast"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
